@@ -1,6 +1,8 @@
 package com.pages;
 
-public class ToolFormPage {
+import com.base.BaseTest;
+
+public class ToolFormPage extends BaseTest {
 	
 	
 }
