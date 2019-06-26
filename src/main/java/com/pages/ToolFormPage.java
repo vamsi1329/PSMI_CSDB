@@ -1,6 +1,6 @@
 package com.pages;
 
-public class ToolFormPage {
+public class ToolFormPage extends baseclass {
 	
 	
 }
