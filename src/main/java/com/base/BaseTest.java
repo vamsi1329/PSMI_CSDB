@@ -3,8 +3,10 @@ package com.base;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class BaseTest {
 
@@ -35,5 +37,10 @@ public class BaseTest {
 		driver.get(url);
 		driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+	
+	public void dropDownSelection(WebElement element, String dropDownText){
+		Select s = new Select(element);
+		s.selectByVisibleText(dropDownText);
 	}
 }
